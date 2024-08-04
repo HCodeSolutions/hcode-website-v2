@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>HCode Solutions | Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hcode Solutions is a forward-thinking software company founded in April 2024. We specialize in innovative software development, digital transformation, and cutting-edge technology solutions to help businesses grow and thrive. Explore our services and discover how we can turn your ideas into impactful digital products. Join us in shaping the future of technology." />
+    <meta name="keywords" content="Hcode Solutions, software development, digital transformation, innovation, technology solutions" />
+    <meta name="owner" content="HCode Solutions" />
+    <meta name="author" content="Dewmith Mihisara, Theekshana Budhika" />
+    <meta name="theme-color" content="#333333" />
+    <link rel="icon" href="../assets/images/logo/hcode-meta-data-icon.png" />
+    <meta name="robots" content="index,follow" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/browser_default_reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+    <!-- main body -->
+    <main class="main-wrapper">
+        <div id="navbar"></div>
+        <!-- content structure -->
+        <section class="content-wrapper">
+            <!-- intro with bg img -->
+            <section></section>
+            <!-- section with our expertise -->
+            <section></section>
+            <!-- section with tech stack -->
+            <section></section>
+        </section>
+        <!-- footer structure -->
+        <section class="footer-wrapper">
+            <!-- section with contact us post -->
+            <section></section>
+            <!-- section with footer info -->
+            <section></section>
+        </section>
+    </main>
+
+    <script>
+        async function loadNavbar() {
+            try {
+                const response = await fetch('../components/navbar/navbar.html');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const navbarHTML = await response.text();
+                document.getElementById('navbar').innerHTML = navbarHTML;
+            } catch (error) {
+                console.error('Error loading navbar:', error);
+            }
+        }
+        loadNavbar();
+    </script>
+</body>
+</html>
